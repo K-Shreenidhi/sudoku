@@ -1,0 +1,72 @@
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Page styling*/
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dde2eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/*Title*/
+h1 {
+  margin-bottom: 25px;
+  color: #351cbe;
+}
+
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 45px);
+  grid-template-rows: repeat(9, 45px);
+  gap: 0;
+  border: 3px solid black;
+}
+
+/*Sudoku board*/
+#sudoku-board input {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+/*Highlight when typing*/
+#sudoku-board input:focus {
+  background-color: #e8f0fe;
+}
+
+#sudoku-board input:nth-child(3n) {
+  border-right: 2px solid black;
+}
+
+#sudoku-board input:nth-child(n+19):nth-child(-n+27),
+#sudoku-board input:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 2px solid black;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1e4fd1;
+}
